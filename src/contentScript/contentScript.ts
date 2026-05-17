@@ -23,7 +23,7 @@ setInterval(() => {
 setInterval(() => {
     const container = document.getElementsByTagName('ytd-channel-video-player-renderer')[0]
     const pauseButton = document.querySelector('[class="ytp-play-button ytp-button"]') as HTMLElement
-    if (container && pauseButton.title == 'Pause (k)') {
+    if (container && pauseButton && pauseButton.title == 'Pause (k)') {
         pauseButton.click()
         container.remove()
     }
@@ -31,7 +31,7 @@ setInterval(() => {
 
 setInterval(() => {
     const element = document.getElementsByClassName('ytp-autonav-toggle-button')[0] as HTMLElement
-    if (element && element.ariaChecked == 'true'){
+    if (element && element.getAttribute('aria-checked') == 'true'){
          element.click()
     }
 }, 100)

@@ -5,7 +5,7 @@
         "action": {"type": "block"},
         "condition": {
             "urlFilter": "ytimg.com",
-            "resourcesTypes": ["image"]
+            "resourceTypes": ["image"]
         }
     },
     {
@@ -14,7 +14,7 @@
         "action": {"type": "block"},
         "condition": {
             "urlFilter": "ggpht.com",
-            "resourcesTypes": ["image"]
+            "resourceTypes": ["image"]
         }
     }
 ]

@@ -9,6 +9,20 @@
     "128": "icon.png"
   },
   "permissions": ["declarativeNetRequest"],
+  "host_permissions": [
+    "*://*.youtube.com/*",
+    "*://*.ytimg.com/*",
+    "*://*.ggpht.com/*"
+  ],
+  "action": {
+    "default_title": "Distraction Free YouTube",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  },
   "declarative_net_request": {
     "rule_resources": [
       {
@@ -23,7 +37,7 @@
   },
   "content_scripts": [
     {
-      "matches": ["<all_urls>"],
+      "matches": ["*://*.youtube.com/*"],
       "js": ["contentScript.js"]
     }
   ]

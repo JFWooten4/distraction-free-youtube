@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "adblock chrome extension",
   "scripts": {
-    "start": "webpack --watch --progress --config webpack.dev.js",
-    "build": "webpack --watch --progress --config webpack.prod.js"
+    "start": "NODE_OPTIONS=--openssl-legacy-provider webpack --watch --progress --config webpack.dev.js",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider webpack --progress --config webpack.prod.js"
   },
   "author": "",
   "devDependencies": {
