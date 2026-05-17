@@ -30,8 +30,9 @@ setInterval(() => {
 }, 100)
 
 setInterval(() => {
-    const element = document.getElementsByClassName('ytp-autonav-toggle-button')[0] as HTMLElement
-    if (element && element.ariaChecked == 'true'){
-         element.click()
+    const element = document.querySelector('.ytp-autonav-toggle-button') as HTMLElement
+    const isEnabled = element?.getAttribute('aria-checked') == 'true' || element?.getAttribute('aria-pressed') == 'true'
+    if (element && isEnabled){
+        element.click()
     }
 }, 100)
